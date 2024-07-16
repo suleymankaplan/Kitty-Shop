@@ -1,0 +1,107 @@
+.cart-bar{
+    width: 100%;
+    height: 50px;
+    background-color: #b8e4ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+.cart-bar-text{
+    font-size: 30px;
+}
+.delete-product{
+    font-size: 20px;
+}
+.cart-container{
+    width: 100%;
+    background-color: #aeffc8;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-in-cart{
+    width: 100%;
+    height: 200px;
+    background-color: #9e8585;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.cat-photos-in-cart{
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+    margin: 0 10px;
+}
+.cart-box-content{
+    height: 180px;
+    background-color: #866969;
+    width: 100%;
+    margin: 10px;
+}
+.cart-declaration{
+    width: 100%;
+    height: 60%;
+    background-color: #ffacac;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-sub-boxes{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(0, 100%, 95%);
+}
+.cart-declaration-text{
+    font-size: 20px;
+    margin: 10px;
+}
+.cart-increase-decrease-box{
+    width: 100px;
+    height: 50px;
+    background-color: #fadada;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.cart-increase-button, .cart-decrease-button, .product-number{
+    border: none;
+    background-color: #bad1ff;
+    font-size: 15px;
+}
+.cart-price-box{
+    width: 100px;
+    height: 50px;
+    background-color: #fadada;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.cart-delete-button{
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin: 10px;
+    border: none;
+    background-color: #8cfff9;
+}
+.cart-empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #b68e8e;
+    font-size: 40px;
+    display: none;
+}

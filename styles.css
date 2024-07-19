@@ -15,7 +15,7 @@ a{
     width: 100%;
     top: 0;
     height: 70px;
-    background-color: #b8e4ff;
+    background-color: #68a7ca;
     position:fixed;
     display: flex;
     align-items: center;
@@ -23,32 +23,41 @@ a{
 }
 .logo{
     width: 300px;
-    background-color: #868686;
+    background-color: transparent;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    font-family: "Playwrite DK Loopet", cursive;
 }
 .menu-box-class{
     width: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #feebeb;
+    background-color: transparent;
 }
 .menu-box{
     width: 100px;
     height: 50px;
-    background-color: #c3a6a6;
+    background-color: #b2d3e6;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+    border: 1px solid transparent;
+}
+.menu-box:hover{
+    background-color: #6fb8df;
+    border: 1px solid #538dab;
+    font-size: 18px;
 }
 .container{
     width: 100%;
     height: auto;
-    background-color: #dbbfbf;
+    background-color: #d8e9f3;
     display: flex;
     justify-content: center;
 }
@@ -56,7 +65,8 @@ a{
     width: 1200px;
     height: auto;
     margin-top: 150px;
-    background-color: #cffed8;
+    background-color: #b2d3e6;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

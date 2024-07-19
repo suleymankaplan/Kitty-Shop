@@ -21,7 +21,7 @@ window.onload = function() {
         let cloneCartElement = cartProductDiv[0].cloneNode(true);
         content.appendChild(cloneCartElement);
     }
-    
+    console.log("a")
     cartProductDiv[0].remove();
     if(document.querySelector(".cart-container")==null){
         document.querySelector(".cart-empty").style.display="flex"
@@ -120,3 +120,13 @@ function totalPriceFunction(){
     }
     totalPrice.textContent="Total: "+totalPriceClone+" Coin"
 }
+const orderButton=document.querySelector(".order-button")
+orderButton.addEventListener('click',()=>{
+    let cartBoxes=document.querySelectorAll(".cart-container")
+    for(let i=0;cartBoxes[i]!=null;i++){
+        cartBoxes[i].remove()
+    }
+    localStorage.setItem("indexArray","")
+    document.querySelector(".total-price").textContent="Total: "+0+" Coin"
+    alert("your order has been received")
+})

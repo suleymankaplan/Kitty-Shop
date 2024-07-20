@@ -44,11 +44,40 @@
     justify-content: center;
     transition: 0.5s;
 }
+.fa-cart-shopping{
+    font-size: 15px;
+    visibility: hidden;
+    margin: 10px;
+    animation-name: cartAnimation;
+    animation-duration: 3s;
+}
+@keyframes cartAnimation{
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(0);
+        opacity: 1;
+        animation-duration: 1s;
+    }
+    100%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+}
+.add-to-cart-text{
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    transition: 0.5s;
+}
 .product-cart-box:hover{
-    background-color: #6fb8df;
+    background-color: #5590b0
 }
 .product-cart-box:active{
-    background-color: #73c0e9;
+    background-color: #3d6980;
+    transform: scale(0.96);
 }
 .product-favorite-box{
     width: 60px;

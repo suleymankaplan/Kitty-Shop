@@ -26,10 +26,30 @@ function addToCartFunction(e){
     cartIndexes+=localStorage.getItem("indexProductValue")
     localStorage.setItem("indexArray",cartIndexes)
     i=localStorage.getItem("indexProductValue")
-    console.log(cartIndexes)
+    //console.log(cartIndexes)
     let value = localStorage.getItem("indexProductValue")
     localStorage.setItem(`productImage${i}`,addToCartButton[value].children[0].getAttribute('src'))
     localStorage.setItem(`productDeclaration${i}`,addToCartButton[value].children[1].children[0].children[0].textContent)
     localStorage.setItem(`productPrice${i}`,addToCartButton[value].children[1].children[0].children[1].textContent)
     e.preventDefault()
 }
+//cart click animation
+const cartButton=document.querySelectorAll(".product-cart-box")
+cartButton.forEach(button=>{
+    button.addEventListener('click',()=>{
+        button.children[1].style.visibility="visible"
+        button.children[0].style.margin=0
+        button.children[1].animate([
+            {transform:'translateX(20px)',opacity:'0',offset:0},
+            {transform:'translateX(0)',opacity:'1',offset:0.25},
+            {transform:'translateX(0)',opacity:'1',offset:0.75},
+            {transform:'translateX(20px)',opacity:'0',offset:1},
+        ],{
+            duration:2000
+        });
+        setTimeout(() => {
+            button.children[1].style.visibility="hidden"
+            button.children[0].style.marginLeft="25px"
+        }, 2000);
+    })
+})

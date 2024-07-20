@@ -89,8 +89,8 @@ window.onload = function() {
                             if(localStorage.getItem("indexArray")[j]==i){
                                 localStorage.setItem("indexArray",localStorage.getItem("indexArray").slice(0,j)+localStorage.getItem("indexArray").slice(j+1))
                                 j--
-                                totalPriceFunction()
                                 button.parentElement.parentElement.parentElement.parentElement.remove()
+                                totalPriceFunction()
                                 if(document.querySelector(".cart-container")==null){
                                     document.querySelector(".cart-empty").style.display="flex"
                                     totalPriceFunction()

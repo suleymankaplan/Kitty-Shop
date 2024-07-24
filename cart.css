@@ -33,7 +33,7 @@
 .cat-photos-in-cart{
     display: flex;
     flex-direction: column;
-    object-fit: cover;
+    object-fit:cover;
     width: 180px;
     height: 180px;
     margin: 0 10px;
@@ -43,8 +43,8 @@
     height: 180px;
     background-color: #aadfff;
     border-radius: 10px;
-    width: 100%;
-    margin: 10px;
+    width: 690px;
+    margin: 0px;
 }
 .cart-declaration{
     width: 100%;

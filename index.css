@@ -51,6 +51,13 @@
     animation-name: cartAnimation;
     animation-duration: 3s;
 }
+.fa-heart{
+    font-size: 20px;
+    transition: 0.2s;
+}
+.fa-heart:active{
+    font-size: 17px;
+}
 @keyframes cartAnimation{
     0%{
         transform: translateX(40px);

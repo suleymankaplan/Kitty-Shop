@@ -21,7 +21,7 @@ window.onload = function() {
         let cloneCartElement = cartProductDiv[0].cloneNode(true);
         content.appendChild(cloneCartElement);
     }
-    console.log("a")
+    //console.log("a")
     cartProductDiv[0].remove();
     if(document.querySelector(".cart-container")==null){
         document.querySelector(".cart-empty").style.display="flex"
@@ -49,7 +49,9 @@ window.onload = function() {
             for(let i=0;i<9;i++)
                 if(imageText.includes(`cat${i+1}`))
                     localStorage.setItem("indexArray",localStorage.getItem("indexArray")+i)
-            button.parentElement.children[1].textContent++
+            setTimeout(() => {
+                button.parentElement.children[1].textContent++
+            }, 100);
             productNumberFunction()
             totalPriceFunction()
         });
@@ -69,7 +71,9 @@ window.onload = function() {
                         }
                     }
             if(button.parentElement.children[1].textContent>1){
-                button.parentElement.children[1].textContent--
+                setTimeout(() => {
+                    button.parentElement.children[1].textContent--
+                }, 100);
                 productNumberFunction()
                 totalPriceFunction()
             }
@@ -109,6 +113,29 @@ function productNumberFunction(){
     for(let i=0;i<Indexes.length;i++){
         cartPrice[i].textContent=parseInt(localStorage.getItem(`productPrice${Indexes[i]}`))*parseInt(cartNumber[i].textContent)+" Coin"
     }
+    //animation
+    cartNumber.forEach(number => {
+        number.parentElement.children[0].addEventListener('click',()=>{
+            number.animate([
+                {transform:'translateY(0)',opacity:'1',offset:0},
+                {transform:'translateY(20px)',opacity:'0',offset:0.4},
+                {transform:'translateY(-20px)',opacity:'0',offset:0.6},
+                {transform:'translateY(0)',opacity:'1',offset:1},
+            ],{  
+                duration:200
+            });
+        });
+        number.parentElement.children[2].addEventListener('click',()=>{
+            number.animate([
+                {transform:'translateY(0)',opacity:'1',offset:0},
+                {transform:'translateY(-20px)',opacity:'0',offset:0.4},
+                {transform:'translateY(20px)',opacity:'0',offset:0.6},
+                {transform:'translateY(0)',opacity:'1',offset:1},
+            ],{  
+                duration:200
+            });
+        })
+    });
 }
 function totalPriceFunction(){
     let totalPrice=document.querySelector(".total-price")
